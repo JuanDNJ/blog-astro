@@ -1,0 +1,50 @@
+---
+import Social from "./Social.astro";
+
+const platform = "github";
+const username = "JuanDNJ";
+
+const socialNetwork = [
+  {
+    url: "www.github.com",
+    platform: "github",
+    username: "JuanDNJ",
+  },
+  {
+    url: "www.x.com",
+    platform: "x.com",
+    username: "JuanDevNjv",
+  },
+  {
+    url: "www.instagram.com",
+    platform: "instagram",
+    username: "juandevnjv",
+  },
+  {
+    url: "www.linkedin.com/in",
+    platform: "linkedin",
+    username: "juan-antonio-valdivia-camacho-09598a279",
+  },
+];
+---
+
+<footer>
+  <p>
+    ¡Más información sobre mis proyectos en {
+      socialNetwork.map((social) => (
+        <Social
+          url={social.url}
+          username={social.username}
+          platform={social.platform}
+        />
+      ))
+    }
+  </p>
+  <style>
+    footer {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</footer>

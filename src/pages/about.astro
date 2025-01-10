@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import Layout from "../layouts/Layout.astro";
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
 const pageTitle = "Sobre mí";
 
 const identity = {
@@ -81,6 +83,7 @@ const cssVars = {
       <p>Mi objetivo no son 3 días.</p>
     )
   }
+  <Footer />
 </Layout>
 <style define:vars={{...cssVars}}>
   h1 {
