@@ -21,6 +21,15 @@ const skills = [
 const happy = true;
 const finished = false;
 const goal = 3;
+
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = 'uppercase';
+const cssVars = {
+  skillColor,
+  fontWeight,
+  textCase
+}
 ---
 
 <Layout title={pageTitle}>
@@ -58,10 +67,10 @@ const goal = 3;
   <p>
     Mis habilidades son:
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
   </p>
-  
+
   {happy && <p>¡Estoy feliz de aprender Astro!</p>}
 
   {finished && <p>¡He terminado este tutorial!</p>}
@@ -74,3 +83,14 @@ const goal = 3;
     )
   }
 </Layout>
+<style define:vars={{...cssVars}}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
