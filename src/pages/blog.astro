@@ -2,12 +2,11 @@
 import '../styles/global.css';
 import Layout from "../layouts/Layout.astro";
 const pageTitle =  "Mi blog de Astro aprendizaje";
+import Navigation from '../components/Navigation.astro';
 ---
 
 <Layout title={pageTitle}>
-  <a href="/">Inicio</a>
-  <a href="/about/">Sobre mi</a>
-  <a href="/blog/">Blog</a>
+	<Navigation />
   <h1>{pageTitle}</h1>
   <p>Aquí es donde publicaré sobre mi viaje de aprendizaje Astro.</p>
   <ul>
