@@ -20,17 +20,17 @@ const skills = [
 ];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "navy";
 const fontWeight = "bold";
-const textCase = 'uppercase';
+const textCase = "uppercase";
 const cssVars = {
   skillColor,
   fontWeight,
-  textCase
-}
+  textCase,
+};
 ---
 
 <Layout title={pageTitle}>
@@ -80,7 +80,7 @@ const cssVars = {
     )
   }
 </Layout>
-<style define:vars={{...cssVars}}>
+<style define:vars={{ ...cssVars }}>
   h1 {
     color: purple;
     font-size: 4rem;
